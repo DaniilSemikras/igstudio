@@ -1,0 +1,214 @@
+.header{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    min-height: 915px;
+    background-color: #111111;
+
+    &__nav{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 162.52%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .logo{
+            margin-top: 5px;
+        }
+        &-list{
+            display: flex;
+            padding: 0 20px;
+            align-items: center;
+            gap: 41px;
+            flex-wrap: wrap;
+            text-align: center;
+            &-wrapper{
+              display: flex;
+            }
+        }
+        &-item{
+            transition: 0.4s all;
+            &:hover{
+                color: #E3B748;
+            }
+        }
+    }
+    &__button{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 14px 35px;
+        border: 2px solid white;
+        background-color: rgba(0, 255, 255, 0);
+        transition: background-color 0.4s;
+        &:hover{
+            color: #E3B748;
+            border-color: #E3B748;
+        }
+    }
+    &__content{
+        margin-top: 72px;
+        display: flex;
+        gap: 90px;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 66px;
+        line-height: 147.52%;
+        margin-top: 80px;
+        max-width: 580px;
+        span{
+            font-weight: 700;
+        }
+    }
+    &__text{
+        max-width: 590px;
+    }
+    &__subtitle{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 162.52%;
+        opacity: 0.3;
+        margin-top: 36px;
+    }
+    &__hero img{
+        max-width: 100%; 
+        width: 467px;
+    }
+    .form{
+        &__talk{
+            display: flex;
+            align-items: center;
+            margin-top: 35px;
+        }
+        &__email{
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #E3B748;
+            border-radius: 43px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 162.52%;
+            height: 72px;
+            width: 438px;;
+            padding: 6px 155px 6px 45px;
+            transition: 0.4s all;
+            &:focus{
+                background-color: rgba(255, 255, 255, 0.274);
+                border: none;
+            }
+            &::placeholder{
+                color: #fff;
+                opacity: 0.1;
+            }
+            &-container{
+                position: relative;
+                &::before{
+                    content: '';
+                    background-image: url(../images/email-icon.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 15px;
+                    top: 50%;
+                    width: 22px;
+                    height: 22px;
+                    transform: translateY(-50%);
+                    opacity: 0.1;
+                }
+            }
+        }
+        &__button{
+            z-index: 2;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 162.52%;
+            border-radius: 43px;
+            margin-left: -145px;
+            padding: 18px 33px;
+            background-color: #E3B748;
+            color: black;
+            transition: 0.4s all;
+            &:hover{
+                background-color: #f1cb6a;
+            }
+        }
+    }
+}
+
+
+@include desktop{
+    .header{
+        min-height: 800px;
+        &__title{
+            font-size: 55px;
+        }
+        &__button{
+            padding: 12px 14px;
+        }
+        &__nav{
+            font-size: 14px;
+        }
+    }
+}
+
+@include tablets{
+    .header{
+        padding-top: 30px;
+        min-height: 650px;
+        &__content{
+            justify-content: center;
+        }
+        &__title{
+            margin-top: 30px;
+            font-size: 35px;
+            text-align: center;
+        }
+        &__subtitle{
+            text-align: center;
+        }
+        &__hero{
+            display: none;
+        }
+        & .form__talk{
+            justify-content: center;
+        }
+    }
+}
+
+@include phones{
+    .header{
+        &__title{
+            margin-top: 30px;
+            font-size: 35px;
+            text-align: center;
+        }
+        &__subtitle{
+            text-align: center;
+        }
+        &__hero{
+            display: none;
+        }
+        & .form__talk{
+            flex-direction: column;
+        }
+        & .form__email{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            width: 250px;
+            font-size: 12px;
+            padding: 10px 30px 10px 50px;
+        }
+        & .form__button{
+            font-size: 16px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            margin-left: 0px;
+            width: 250px;
+        }
+    }
+}

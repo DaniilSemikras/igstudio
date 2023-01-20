@@ -1,0 +1,125 @@
+.reviews{
+    margin-top: 186px;
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 143.02%;
+        max-width: 380px;
+    }
+}
+
+.slider__buttons{
+    display: flex;
+    gap: 30px;
+}
+.slider__btn-next circle,
+.slider__btn-prev circle{
+    transition: 0.4s all;
+    &:hover{
+        fill: #E3B748;
+    }
+}
+.slick{
+    &-slider{
+        margin-top: 90px;
+    }
+    &-slide{
+        border-radius: 14px;
+        min-height: 300px;
+        width: 359px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0 27px;
+        margin-top: 10px;
+        padding: 36px 26px;
+        transition: 0.3s all;
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        &:hover{
+            background-color:#2E2E2E ;
+            margin-top: 5px;
+        }
+    }
+}
+
+.author{
+    &-name{
+        margin-top:20px;
+    }
+    &-speciality{
+        margin-top:10px;
+    }
+    &-review{
+        margin-top: 20px;
+    }
+}
+
+
+@include desktop{
+    .reviews{
+        margin-top: 80px;
+        &__title{
+        font-size: 40px;
+        }
+        
+    }
+}
+
+@include laptop{
+    .slick-slide img {
+        width: 50px;
+        height: 50px;
+    }
+    .slick-slide {
+        min-height: initial;
+        margin-top: 0px;
+        padding: 15px 15px;
+    }
+    .author-name {
+        margin-top: 10px;
+        font-size: 17px;
+    }
+    .author-review {
+        margin-top: 10px;
+        font-size: 13px;
+        text-align: justify;
+    }
+}
+@include tablets{
+    .slick-slide img {
+        margin: 0 auto;
+    }
+    .slick-slide {
+        text-align: center;
+    }
+    .author-name {
+        text-align: center;
+    }
+    .slider__btn-next,
+    .slider__btn-prev{
+        width: 70px;
+    }
+    .slick-slider {
+        margin-top: 50px;
+    }
+    .reviews__title {
+        font-size: 30px;
+    }
+    .reviews-wrapper {
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .reviews__title {
+        max-width: initial; 
+    }
+}
+@include phones{
+}

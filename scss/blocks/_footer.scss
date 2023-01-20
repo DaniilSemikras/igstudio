@@ -1,0 +1,103 @@
+.footer{
+    margin-top: 240px;
+    background-color: #171717;
+    min-height: 400px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__nav{
+        display: flex;
+        gap: 120px;
+        align-items: center;    
+        flex-wrap: wrap;
+        justify-content: center;
+    &-list{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+    &-item{
+        transition: 0.4s all;
+        &:hover{color: #E3B748;}
+    }
+    }
+    &__social-list{
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+    }
+    &__social-item{
+        & path{
+            transition: 0.4s all;
+        }
+        &:hover path{
+            fill: rgb(255, 255, 255);
+        }
+    }
+}
+
+.slider__btn-next circle,
+.slider__btn-prev circle{
+    transition: 0.4s all;
+    &:hover{
+        fill: #E3B748;
+    }
+}
+
+.copyright{
+    margin-top: 100px;
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        &-item{
+            transition: 0.4s all;
+            &:hover{color: #E3B748;}
+        }
+    }
+}
+
+@include laptop{
+    .footer{
+        margin-top: 80px;
+        & .logo{
+            margin-top: 5px;
+        }
+        &__nav{
+            gap: 50px;
+            &-list{
+                gap: 20px;
+            }
+        }
+    }
+}
+
+$breakpoint_l:768px;
+@include tablets{
+    .footer{
+        &__nav{
+            flex-direction: column;
+            &-list{
+                justify-content: center;
+            }
+        }
+    }
+    .copyright{
+        margin-top: 20px;
+        &__list{
+            flex-wrap: wrap;
+        }
+    }
+}
+
+$breakpoint_m:480px;
+@include phones{
+    .footer__nav-list {
+        gap: 10px;
+    }
+}

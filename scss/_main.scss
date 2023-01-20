@@ -1,0 +1,50 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-color: #1D1D1D; 
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body {
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    width: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #E3B748;
+    border-radius: 3px;
+}
+
+.container{
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.none{
+    display: none;
+}
+
+.overflow{
+    overflow-y: hidden;
+}
+
+.visible{
+    transition: 0.5s;
+    opacity: 0.3;
+}
+
+
+$breakpoint_xxl:1200px;
+$breakpoint_xl:992px;
+$breakpoint_l:768px;
+$breakpoint_m:480px;

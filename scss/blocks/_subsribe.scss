@@ -1,0 +1,94 @@
+.subscribe{
+    margin-top: 215px;
+    &__wrapper{
+        background-color: #47474784;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 42px;
+        height: 356px;
+    }
+    &__title{
+        text-align: center;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 161.52%;
+    }
+    &__form{
+        height: 53px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        input{
+            height: 43px;
+            background-color: #E4E4E4;
+        }
+        &-name{
+            padding: 15px 23px;
+            width: 276px;
+            border: none;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            font-size: 17px;
+        }
+        &-email{
+            padding: 15px 60px 15px 15px;
+            width: 276px;
+            border: none;
+            font-size: 17px;
+        }
+        &-button{
+            width: 150px;
+            background-color: #E3B748;
+            font-weight: 700;
+            color: black;
+            height: 43px;
+            border: none;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            transition: 0.4s all;
+            &:hover{
+                background-color: #eac973;
+            }
+        }
+    }
+}
+
+
+
+@include desktop{
+    .subscribe{
+        margin-top: 80px;
+    }
+}
+@include laptop{
+    .subscribe{
+        margin-top: 50px;
+    }
+}
+@include tablets{
+    .subscribe{
+        &__title{
+            font-size: 30px;
+        }
+        &__form {
+            font-size: 14px;
+        }
+        &__form input{
+            height: 30px;
+            border-radius: 0;
+            width: 150px;
+            padding: 15px;
+            font-size: 12px;
+        }
+        &__form-button{
+            height: 30px;  
+            border-radius: 0;
+        }
+    }
+}
+@include phones{
+}

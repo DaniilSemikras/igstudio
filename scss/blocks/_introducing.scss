@@ -1,0 +1,72 @@
+.introducing{
+    margin-top: 166px;
+    &__title{
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 161.52%;
+        max-width: 387px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__text{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 162.52%;
+        max-width: 550px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: url(../images/line.png);
+            height: 200px;
+            width: 1px;
+            left: -20%;
+        }
+        &-top{
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 162.52%;  
+        }
+        &-bottom{  
+            margin-top: 16px;
+            opacity: 0.3;
+        }
+    }
+}
+
+@include desktop{
+    .introducing{
+        margin-top: 80px;
+        &__title{
+            font-size: 40px;
+        }
+        &__text{
+            margin-top: 30px;
+        }
+        &__text::before{
+            left: -10%;
+        }
+    }
+}
+
+@include tablets{
+    .introducing{
+        &__title{
+            font-size: 30px;
+        }
+        &__content{
+            justify-content: center;
+            text-align: center;
+        }
+        &__text::before{
+            display: none;
+        }
+        &__text-top{
+            font-size: 25px;
+        }
+    }
+}
